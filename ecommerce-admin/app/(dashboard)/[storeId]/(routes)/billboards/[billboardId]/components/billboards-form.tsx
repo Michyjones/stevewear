@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Billboard, Store } from "@prisma/client";
+import { Billboard } from "@prisma/client";
 import { Trash } from "lucide-react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -79,7 +79,7 @@ export const BillboardForm: React.FC<BillboardsPageProps> = ({
       setLoading(true);
       await axios.delete(`/api/${params.storeId}/billboards/${params.billboardId}`);
       router.refresh();
-      router.push("/");
+      router.push(`/${params.storeId}/billboards`);
       toast.success("Billboard Deleted");
     } catch (error) {
       toast.error(
@@ -158,7 +158,6 @@ export const BillboardForm: React.FC<BillboardsPageProps> = ({
           </Button>
         </form>
       </Form>
-      <Separator />
     </>
   );
 };
