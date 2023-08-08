@@ -27,7 +27,7 @@ export const AlertModel: React.FC<AlertModelProps> = ({
         return null;
     }
     return (
-        <Modal title="Are Sure You?" description="This is a Permanet Action" isOpen={isOpen} onClose={onClose}>
+        <Modal title="Are Sure You?" description="This Action is Permanent!" isOpen={isOpen} onClose={onClose}>
             <div className="pt-6 space-x-2 flex items-center justify-end w-full">
                 <Button disabled={loading} variant="outline" onClick={onClose}> 
                     Cancel
