@@ -1,4 +1,4 @@
-import { Banknote, CreditCard, DollarSign, Package } from "lucide-react";
+import { Banknote, CreditCard, Package } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 import { Overview } from "@/components/overview";
